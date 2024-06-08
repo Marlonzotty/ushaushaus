@@ -1,0 +1,39 @@
+import React, { useEffect, useState } from 'react';
+
+const Countdown = () => {
+  const [timeLeft, setTimeLeft] = useState(80); // Inicializa com 80 segundos
+
+  useEffect(() => {
+    if (timeLeft <= 0) return;
+    const timer = setTimeout(() => {
+      setTimeLeft(timeLeft - 1);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, [timeLeft]);
+
+  const formatTime = (seconds) => {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+  };
+
+  return (
+    <div className="bg-blue-100 text-center p-2 text-xs md:text-sm">
+      <h2 className="font-bold">
+        Presenteie usando o cupom <span className="text-red-500">NAMORADOS10</span> e ganhe 10% OFF no seu pedido!
+      </h2>
+      <div className="flex justify-center items-center mt-1 text-red-500">
+        {timeLeft > 0 ? (
+          <div className="text-center">
+            <p className="font-bold">{formatTime(timeLeft)}</p>
+          </div>
+        ) : (
+          <p>Tempo Esgotado!</p>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Countdown;
