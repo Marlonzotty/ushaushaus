@@ -7,6 +7,7 @@ import ImageSlider from './components/ImageSlider';
 import Features from './components/Features';
 import Quiz from './components/Quiz';
 import Countdown from './components/Countdown';
+import Congrats from './components/Congrats';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           </>
         } />
         <Route path="/quiz" element={<Quiz />} />
+        <Route path="/congrats" element={<Congrats />} />
       </Routes>
     </div>
   );
