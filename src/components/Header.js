@@ -24,14 +24,23 @@ const Header = () => {
         </div>
       </div>
       <div className="mt-6">
-        <h1 className="text-3xl md:text-5xl font-bold mb-4">Responda o quiz e Ganhe um colchão Luuna</h1>
-        <p className="mt-2 text-lg md:text-2xl mb-6">Conheça Luuna e tenha noites impecáveis</p>
+        
+       
+        <div className="mt-4">
+          <img
+            src="/images/colchao.jpg"
+            alt="Conforto garantido com colchões Luuna"
+            className="mx-auto w-full md:w-3/4 lg:w-1/2" // Responsivo em telas pequenas, tamanho menor em telas maiores
+          />
+        </div>
         <button
           onClick={() => navigate('/quiz')}
           className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 md:px-10 rounded-full shadow-lg transition transform hover:scale-105 animate-pulse"
         >
           Quero Participar da promoção
         </button>
+        <p className="mt-2 text-lg md:text-2xl mb-4">luuna seu colchão na caixa</p>
+
       </div>
     </header>
   );

@@ -7,7 +7,7 @@ const Countdown = () => {
     if (timeLeft <= 0) return;
     const timer = setTimeout(() => {
       setTimeLeft(timeLeft - 1);
-    }, 1000);
+    }, 8000);
 
     return () => clearTimeout(timer);
   }, [timeLeft]);
@@ -21,7 +21,7 @@ const Countdown = () => {
   return (
     <div className="bg-blue-100 text-center p-2 text-xs md:text-sm">
       <h2 className="font-bold">
-        Presenteie usando o cupom <span className="text-red-500">NAMORADOS10</span> e ganhe 10% OFF no seu pedido!
+        Presenteie quem você ama  <span className="text-red-500">PARTICIPANDO DO QUIZ</span> e ganhe 100% OFF no seu pedido!
       </h2>
       <div className="flex justify-center items-center mt-1 text-red-500">
         {timeLeft > 0 ? (
