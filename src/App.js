@@ -48,9 +48,9 @@ function App() {
           </NoHeaderLayout>
         } />
         <Route path="/congrats" element={
-          <MainLayout>
+           <NoHeaderLayout>
             <Congrats />
-          </MainLayout>
+            </NoHeaderLayout>
         } />
         <Route path="/offer" element={
           <NoHeaderLayout>

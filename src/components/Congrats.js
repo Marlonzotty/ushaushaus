@@ -21,7 +21,7 @@ const Congrats = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Pagamento realizado com sucesso!');
+    alert('Você está proximo de conquistar seu novo Colchão');
     navigate('/offer'); // Adiciona a rota para a qual você quer navegar após o form ser submetido
   };
 
@@ -30,8 +30,8 @@ const Congrats = () => {
       <div className="bg-white text-black p-6 rounded-md shadow-md w-full max-w-lg">
         <h1 className="text-4xl md:text-6xl font-bold mb-4 text-blue-900">Parabéns!</h1>
         <p className="text-lg md:text-2xl mb-4 text-blue-900">Você ganhou um colchão Luuna!</p>
-        <p className="text-lg md:text-2xl mb-4 text-blue-900">Pagando somente o frete seu colchão estará aí em até 10 dias.</p>
-        <p className="text-lg md:text-2xl mb-8 text-blue-900">84,99R$ para sua região.</p>
+        <p className="text-lg md:text-2xl mb-4 text-blue-900">Resgate seu Colchão 100% Gratis</p>
+        <p className="text-lg md:text-2xl mb-8 text-blue-900">Selecione o seu preferido</p>
         
         <form onSubmit={handleSubmit}>
           {/* Campos de formulário aqui */}

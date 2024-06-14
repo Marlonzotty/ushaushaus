@@ -8,7 +8,7 @@ const SecurityFeatures = () => {
         <img
           src="/images/seguran.jpg"  // Caminho atualizado para a primeira imagem
           alt="Compra Segura e Privacidade Protegida"
-          className="w-25 h-auto"  // Tamanho menor
+          className="w-100 h-auto"  // Tamanho menor
         />
       </a>
      
