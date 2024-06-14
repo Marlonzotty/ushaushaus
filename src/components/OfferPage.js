@@ -26,7 +26,7 @@ const OfferPage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-center p-6">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-center p-6 mt-16">
       <h1 className="text-2xl md:text-4xl font-bold text-blue-800 mb-6">
         OFERTA 5 ANOS LUUNA COLCHÕES - Colchão de Casal Ortopédico Supreme Confort com 20 Anos de Garantia!
       </h1>
@@ -35,7 +35,9 @@ const OfferPage = () => {
           <div
             key={produto.id}
             onClick={() => selectProduct(produto)}
-            className={`p-4 border-2 ${selectedProduct?.id === produto.id ? 'border-blue-500' : 'border-transparent'} rounded-lg cursor-pointer`}
+            className={`p-4 border-2 rounded-lg cursor-pointer transition-transform transform ${
+              selectedProduct?.id === produto.id ? 'border-blue-500 shadow-xl scale-105' : 'border-transparent'
+            }`}
           >
             <img src={produto.imagem} alt={`Imagem do ${produto.nome}`} className="w-full h-40 object-cover rounded-t-lg" />
             <div className="mt-2">
