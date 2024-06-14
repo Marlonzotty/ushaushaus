@@ -39,7 +39,7 @@ const Header = () => {
         >
           Quero Participar da promoção
         </button>
-        <p className="mt-2 text-lg md:text-2xl mb-4">luuna seu colchão na caixa</p>
+        <p className="mt-2 text-lg md:text-2xl mb-4">Luuna seu colchão na caixa</p>
 
       </div>
     </header>

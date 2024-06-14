@@ -8,7 +8,26 @@ import SecurityFeatures from './components/SecurityFeatures';
 import Quiz from './components/Quiz';
 import Countdown from './components/Countdown';
 import Congrats from './components/Congrats';
-import Footer from './components/Footer/Footer'; 
+import Footer from './components/Footer/Footer';
+import OfferPage from './components/OfferPage';
+import PaymentPage from './components/PaymentPage';
+
+import 'bootstrap/dist/css/bootstrap.min.css'; // Importando o CSS do Bootstrap
+
+const MainLayout = ({ children }) => (
+  <>
+    <Header />
+    {children}
+    <Footer />
+  </>
+);
+
+const NoHeaderLayout = ({ children }) => (
+  <>
+    {children}
+    <Footer />
+  </>
+);
 
 function App() {
   return (
@@ -16,18 +35,34 @@ function App() {
       <Countdown />
       <Routes>
         <Route path="/" element={
-          <>
-            <Header />
+          <MainLayout>
             <StoreInfo />
             <ImageSlider />
             <Features />
             <SecurityFeatures />
-          </>
+          </MainLayout>
         } />
-        <Route path="/quiz" element={<Quiz />} />
-        <Route path="/congrats" element={<Congrats />} />
+        <Route path="/quiz" element={
+          <NoHeaderLayout>
+            <Quiz />
+          </NoHeaderLayout>
+        } />
+        <Route path="/congrats" element={
+          <MainLayout>
+            <Congrats />
+          </MainLayout>
+        } />
+        <Route path="/offer" element={
+          <NoHeaderLayout>
+            <OfferPage />
+          </NoHeaderLayout>
+        } />
+        <Route path="/payment" element={
+          <NoHeaderLayout>
+            <PaymentPage />
+          </NoHeaderLayout>
+        } />
       </Routes>
-      <Footer /> 
     </div>
   );
 }

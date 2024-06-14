@@ -7,7 +7,7 @@ const Countdown = () => {
     if (timeLeft <= 0) return;
     const timer = setTimeout(() => {
       setTimeLeft(timeLeft - 1);
-    }, 8000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [timeLeft]);
@@ -19,11 +19,11 @@ const Countdown = () => {
   };
 
   return (
-    <div className="bg-blue-100 text-center p-2 text-xs md:text-sm">
-      <h2 className="font-bold">
-        Presenteie quem você ama  <span className="text-red-500">PARTICIPANDO DO QUIZ</span> e ganhe 100% OFF no seu pedido!
+    <div className="bg-blue-100 text-center p-1 text-xs md:text-sm fixed top-0 w-full z-50">
+      <h2 className="font-bold text-xs md:text-sm">
+        Presenteie quem você ama <span className="text-red-500">PARTICIPANDO DO QUIZ</span> e ganhe 100% OFF no seu pedido!
       </h2>
-      <div className="flex justify-center items-center mt-1 text-red-500">
+      <div className="flex justify-center items-center mt-1 text-red-500 text-xs md:text-sm">
         {timeLeft > 0 ? (
           <div className="text-center">
             <p className="font-bold">{formatTime(timeLeft)}</p>

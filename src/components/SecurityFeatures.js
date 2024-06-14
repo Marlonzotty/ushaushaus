@@ -11,13 +11,7 @@ const SecurityFeatures = () => {
           className="w-25 h-auto"  // Tamanho menor
         />
       </a>
-      <a href="https://www.siteconfiavel.com.br/site/vercel-app?id=66675061effc726e3eb4a0cd" className="transition-transform transform hover:scale-105">
-        <img
-          src="/images/segurança.jpg"  // Caminho atualizado para a segunda imagem
-          alt="Certificados de Segurança"
-          className="w-25 h-auto"  // Tamanho menor
-        />
-      </a>
+     
     </div>
   );
 };
