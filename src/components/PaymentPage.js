@@ -25,8 +25,8 @@ const PaymentPage = () => {
   };
 
   return (
-    <Container className="my-4 d-flex flex-column align-items-center">
-      <h1 className="text-center mb-4"></h1>
+    <Container className="my-4 d-flex flex-column align-items-center" style={{ marginTop: '120px' }}>
+      <h1 className="text-center mb-4">Escolha o melhor frete para você</h1>
       <Form className="w-100" style={{ maxWidth: '600px' }}>
         <Form.Check
           type="radio"
@@ -66,16 +66,17 @@ const PaymentPage = () => {
           </Card.Header>
           <Card.Body>
             <Card.Title>Pagando com Pix</Card.Title>
-            <Button className="btn-block d-flex align-items-center justify-content-center mb-4">
+            <Button 
+              className="btn-block d-flex align-items-center justify-content-center mb-4"
+              style={{ backgroundColor: 'green', borderColor: 'green' }}
+              onClick={handlePayment}
+            >
               <img src="/images/icone-pix.jpg" alt="Ícone Pix" style={{ width: '24px', marginRight: '8px' }} />
               Pagar com Pix
             </Button>
           </Card.Body>
         </Card>
       </Form>
-      <Button onClick={handlePayment} className="btn-block d-flex align-items-center justify-content-center mb-4">
-        Confirmar Pagamento
-      </Button>
       <Card className="text-center border-warning mb-4 w-100" style={{ maxWidth: '600px' }}>
         <Card.Body>
           <Card.Title>1 Oferta Disponível para você:</Card.Title>
@@ -85,7 +86,7 @@ const PaymentPage = () => {
             <p className="line-through text-red-500">{selectedProduct.precoOriginal}</p>
             <p className="font-bold text-green-500">{selectedProduct.preco}</p>
           </Card.Text>
-          <Button onClick={() => alert('Você será redirecionado ao Ambien 100% seguro em instantes')} className="btn-block btn-warning">
+          <Button onClick={() => alert('Você será redirecionado ao Ambiente 100% seguro em instantes')} className="btn-block btn-warning">
             PEGAR OFERTA
           </Button>
         </Card.Body>

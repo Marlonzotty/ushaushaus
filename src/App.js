@@ -31,7 +31,7 @@ const NoHeaderLayout = ({ children }) => (
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ marginTop: '80px' }}>
       <Countdown />
       <Routes>
         <Route path="/" element={
