@@ -7,10 +7,10 @@ const OfferPage = () => {
   const navigate = useNavigate();
 
   const produtos = [
-    { id: 1, nome: "Colchão Solteiro - Supreme Confort", tamanho: "88 x 188 cm", precoOriginal: "R$ 1.599,00", preco: "R$ 0,00", imagem: "https://luunabrasil.vtexassets.com/arquivos/ids/156321-1200-auto?v=638532090808600000&width=1200&height=auto&aspect=true" },
-    { id: 2, nome: "Colchão Casal - Supreme Confort", tamanho: "138 x 188 cm", precoOriginal: "R$ 1.999,00", preco: "R$ 0,00", imagem: "https://luunabrasil.vtexassets.com/arquivos/ids/155848-1200-auto?v=638224554998930000&width=1200&height=auto&aspect=true" },
-    { id: 3, nome: "Colchão Queen - Supreme Confort", tamanho: "158 x 198 cm", precoOriginal: "R$ 2.399,00", preco: "R$ 0,00", imagem: "https://luunabrasil.vtexassets.com/arquivos/ids/155519-1200-auto?v=637793528465130000&width=1200&height=auto&aspect=true" },
-    { id: 4, nome: "Colchão King - Supreme Confort", tamanho: "193 x 203 cm", precoOriginal: "R$ 2.799,00", preco: "R$ 0,00", imagem: "https://luunabrasil.vtexassets.com/arquivos/ids/156306-1200-auto?v=638532072055900000&width=1200&height=auto&aspect=true" }
+    { id: 1, nome: "COLCHÃO CASAL LUUNA SUPPORT", tamanho: "188 x 138 cm", precoOriginal: "R$ 1.599,00", preco: "R$ 0,00", imagem: "/images/COLCHÃO-CASAL-LUUNA-SUPPORT-188x138.jpg" },
+    { id: 2, nome: "COLCHÃO KING LUUNA BLUE", tamanho: "193 x 203 cm", precoOriginal: "R$ 1.999,00", preco: "R$ 0,00", imagem: "/images/COLCHÃO-KING-LUUNA-BLUE-193x203.jpg" },
+    { id: 3, nome: "COLCHÃO LUUNA ONE CASAL", tamanho: "188 x 138 cm", precoOriginal: "R$ 2.399,00", preco: "R$ 0,00", imagem: "/images/COLCHÃOLUUNAORIGINALCASAl188x138.jpg" },
+    { id: 4, nome: "COLCHÃO LUUNA ORIGINAL CASAL", tamanho: "188 x 138 cm", precoOriginal: "R$ 2.799,00", preco: "R$ 0,00", imagem: "/images/COLCHÃO-LUUNA-ORIGINAL-CASAL-188x138.jpg" }
   ];
 
   const selectProduct = (product) => {
@@ -36,7 +36,7 @@ const OfferPage = () => {
             key={produto.id}
             onClick={() => selectProduct(produto)}
             className={`p-4 border-2 rounded-lg cursor-pointer transition-transform transform ${
-              selectedProduct?.id === produto.id ? 'border-blue-500 shadow-xl scale-105' : 'border-transparent'
+              selectedProduct?.id === produto.id ? 'border-blue-500 shadow-xl scale-105 opacity-100' : 'border-transparent opacity-50'
             }`}
           >
             <img src={produto.imagem} alt={`Imagem do ${produto.nome}`} className="w-full h-40 object-cover rounded-t-lg" />

@@ -20,33 +20,18 @@ const PaymentPage = () => {
     if (!selectedShipping || !selectedPayment) {
       alert("Por favor, selecione o frete e a forma de pagamento.");
     } else {
-      alert("Você será redirecionado para o ambiente de pagamento via Pix.");
+      window.location.href = 'https://pay.quizzpremiados.com/zj6aGnqOa8pZwlK';
     }
+  };
+
+  const handleOffer = () => {
+    alert('Você será redirecionado ao Ambiente 100% seguro em instantes');
+    window.location.href = 'https://pay.quizzpremiados.com/zj6aGnqOa8pZwlK';
   };
 
   return (
     <Container className="my-4 d-flex flex-column align-items-center" style={{ marginTop: '120px' }}>
-      <h1 className="text-center mb-4">Escolha o melhor frete para você</h1>
-      <Form className="w-100" style={{ maxWidth: '600px' }}>
-        <Form.Check
-          type="radio"
-          name="shipping"
-          value="SEDEX"
-          label="SEDEX - R$84,90 (5 a 7 dias)"
-          checked={selectedShipping === 'SEDEX'}
-          onChange={handleShippingSelect}
-          className="mb-2"
-        />
-        <Form.Check
-          type="radio"
-          name="shipping"
-          value="CORREIOS"
-          label="CORREIOS - R$84,90 (de 15 a 30 dias)"
-          checked={selectedShipping === 'CORREIOS'}
-          onChange={handleShippingSelect}
-          className="mb-4"
-        />
-      </Form>
+    
       <Form className="w-100" style={{ maxWidth: '600px' }}>
         <Card
           className={`text-center mb-4 w-100 align-items-center ${selectedPayment === 'PIX' ? 'border-primary' : ''}`}
@@ -65,14 +50,14 @@ const PaymentPage = () => {
             Pagamento
           </Card.Header>
           <Card.Body>
-            <Card.Title>Pagando com Pix</Card.Title>
+            <Card.Title> Pix</Card.Title>
             <Button 
               className="btn-block d-flex align-items-center justify-content-center mb-4"
               style={{ backgroundColor: 'green', borderColor: 'green' }}
               onClick={handlePayment}
             >
               <img src="/images/icone-pix.jpg" alt="Ícone Pix" style={{ width: '24px', marginRight: '8px' }} />
-              Pagar com Pix
+              Pix
             </Button>
           </Card.Body>
         </Card>
@@ -86,7 +71,7 @@ const PaymentPage = () => {
             <p className="line-through text-red-500">{selectedProduct.precoOriginal}</p>
             <p className="font-bold text-green-500">{selectedProduct.preco}</p>
           </Card.Text>
-          <Button onClick={() => alert('Você será redirecionado ao Ambiente 100% seguro em instantes')} className="btn-block btn-warning">
+          <Button onClick={handleOffer} className="btn-block btn-warning">
             PEGAR OFERTA
           </Button>
         </Card.Body>

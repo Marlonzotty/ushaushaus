@@ -31,7 +31,7 @@ const Quiz = () => {
   return (
     <div className="bg-gradient-to-r from-[#244674] via-[#244674] to-[#244674] min-h-screen flex items-center justify-center p-4">
       <div className="max-w-2xl w-full p-6 bg-white shadow-md rounded-md">
-        <img src="https://scontent.fjdf6-1.fna.fbcdn.net/v/t39.30808-6/438160924_755580030117349_334349734557679440_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHpbredceQUAgo0lstWPU45oYyNgOsCMouhjI2A6wIyi5XPm6hr__kJGrS6SzlsHdFgrZ600IDy0HwO8qGGPWRa&_nc_ohc=ylG-YKswqxAQ7kNvgHP3li-&_nc_ht=scontent.fjdf6-1.fna&oh=00_AYB__g_VvJ-GsGGGVyfe7IRVvKZ31D7q8YrrI7-oQTuhSg&oe=666A72BF" alt="Ambev" className="object-cover w-full h-64 rounded-md mb-6" />
+        <img src="/images/COLCHÃO-LUUNA-ORIGINAL-CASAL-188x138.jpg" alt="Ambev" className="object-cover w-full h-64 rounded-md mb-6" />
         <h2 className="text-xl font-bold mb-4">De 0 a 5, como você avaliaria a marca Luna?</h2>
         <div className="flex justify-center items-center mb-6 space-x-2">
           {[1, 2, 3, 4, 5].map((star) => (
