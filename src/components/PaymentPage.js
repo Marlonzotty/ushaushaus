@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Container, Button, Form, Card } from 'react-bootstrap';
+import { FaGift } from 'react-icons/fa';  // Importar o ícone de presente
 
 const PaymentPage = () => {
   const [selectedShipping, setSelectedShipping] = useState('');
@@ -31,7 +32,6 @@ const PaymentPage = () => {
 
   return (
     <Container className="my-4 d-flex flex-column align-items-center" style={{ marginTop: '120px' }}>
-    
       <Form className="w-100" style={{ maxWidth: '600px' }}>
         <Card
           className={`text-center mb-4 w-100 align-items-center ${selectedPayment === 'PIX' ? 'border-primary' : ''}`}
@@ -50,7 +50,7 @@ const PaymentPage = () => {
             Pagamento
           </Card.Header>
           <Card.Body>
-            <Card.Title> Pix</Card.Title>
+            <Card.Title>Pix</Card.Title>
             <Button 
               className="btn-block d-flex align-items-center justify-content-center mb-4"
               style={{ backgroundColor: 'green', borderColor: 'green' }}
@@ -71,7 +71,8 @@ const PaymentPage = () => {
             <p className="line-through text-red-500">{selectedProduct.precoOriginal}</p>
             <p className="font-bold text-green-500">{selectedProduct.preco}</p>
           </Card.Text>
-          <Button onClick={handleOffer} className="btn-block btn-warning">
+          <Button onClick={handleOffer} className="btn-block btn-warning animate-pulse  align-items-center justify-content-center">
+            <FaGift className="mr-2 " /> {/* Adicionando ícone de presente */}
             PEGAR OFERTA
           </Button>
         </Card.Body>
