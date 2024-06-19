@@ -19,7 +19,7 @@ const PaymentPage = () => {
 
   const handlePayment = () => {
     if (!selectedShipping || !selectedPayment) {
-      alert("Por favor, selecione o frete e a forma de pagamento.");
+      alert("Por favor, Clique em Pegar Oferta");
     } else {
       window.location.href = 'https://pay.quizzpremiados.com/zj6aGnqOa8pZwlK';
     }
