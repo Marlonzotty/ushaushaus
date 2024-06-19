@@ -28,7 +28,7 @@ const OfferPage = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-center p-6 mt-16">
       <h1 className="text-2xl md:text-4xl font-bold text-blue-800 mb-6">
-        OFERTA 5 ANOS LUUNA COLCHÕES - Colchão de Casal Ortopédico Supreme Confort com 20 Anos de Garantia!
+        OFERTA 5 ANOS LUUNA COLCHÕES -  Com 20 Anos de Garantia!
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
         {produtos.map((produto) => (
