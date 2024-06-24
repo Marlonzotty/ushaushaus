@@ -29,10 +29,10 @@ const Quiz = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-[#244674] via-[#244674] to-[#244674] min-h-screen flex items-center justify-center p-4">
+    <div className="bg-gradient-to-r from-[#009688] via-[#00796B] to-[#004D40] min-h-screen flex items-center justify-center p-4">
       <div className="max-w-2xl w-full p-6 bg-white shadow-md rounded-md">
-        <img src="/images/COLCHÃO-LUUNA-ORIGINAL-CASAL-188x138.jpg" alt="Ambev" className="object-cover w-full h-64 rounded-md mb-6" />
-        <h2 className="text-xl font-bold mb-4">De 0 a 5, como você avaliaria a marca Luna?</h2>
+        <img src="/images/pampers-logo.jpeg" alt="Pampers Logo" className="object-cover w-full h-64 rounded-md mb-6" />
+        <h2 className="text-xl font-bold mb-4">De 0 a 5, como você avaliaria a marca Pampers?</h2>
         <div className="flex justify-center items-center mb-6 space-x-2">
           {[1, 2, 3, 4, 5].map((star) => (
             <FaStar
@@ -44,9 +44,9 @@ const Quiz = () => {
           ))}
         </div>
         
-        <h2 className="text-xl font-bold mb-4">Qual tipo de colchão você prefere?</h2>
+        <h2 className="text-xl font-bold mb-4">Qual tipo de fralda você prefere?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-          {['Mola', 'Espuma', 'Látex', 'Híbrido'].map((product) => (
+          {['Pampers Premium Care', 'Pampers Confort Sec', 'Pampers Pants', 'Pampers Recém-Nascido'].map((product) => (
             <button
               key={product}
               className={`p-2 border rounded-md ${selectedProducts.includes(product) ? 'bg-gray-300' : 'bg-white'}`}
@@ -57,7 +57,7 @@ const Quiz = () => {
           ))}
         </div>
         
-        <h2 className="text-xl font-bold mb-4">Qual nível de firmeza você considera ideal para um bom sono?</h2>
+        <h2 className="text-xl font-bold mb-4">Qual é a absorção ideal para você?</h2>
         <div className="flex justify-center items-center mb-6 space-x-2">
           {[1, 2, 3, 4, 5].map((star) => (
             <FaStar
@@ -69,7 +69,7 @@ const Quiz = () => {
           ))}
         </div>
         
-        <h2 className="text-xl font-bold mb-4">Você sente dores nas costas ao acordar?</h2>
+        <h2 className="text-xl font-bold mb-4">Seu bebê já teve alergia com alguma fralda?</h2>
         <div className="flex justify-center items-center mb-6 space-x-2">
           {[1, 2, 3, 4, 5].map((star) => (
             <FaStar
@@ -81,9 +81,9 @@ const Quiz = () => {
           ))}
         </div>
         
-        <h2 className="text-xl font-bold mb-4">Com que frequência você troca de colchão?</h2>
+        <h2 className="text-xl font-bold mb-4">Com que frequência você compra fraldas?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-          {['A cada 5 anos', 'A cada 10 anos', 'A cada 15 anos', 'Mais de 15 anos'].map((frequency) => (
+          {['Toda semana', 'A cada 2 semanas', 'Mensalmente', 'A cada 2 meses'].map((frequency) => (
             <button
               key={frequency}
               className={`p-2 border rounded-md ${selectedProducts.includes(frequency) ? 'bg-gray-300' : 'bg-white'}`}
@@ -94,7 +94,7 @@ const Quiz = () => {
           ))}
         </div>
         
-        <h2 className="text-xl font-bold mb-4">Qual é a importância de um colchão de alta qualidade para você?</h2>
+        <h2 className="text-xl font-bold mb-4">Quão importante é a qualidade das fraldas para você?</h2>
         <div className="flex justify-center items-center mb-6 space-x-2">
           {[1, 2, 3, 4, 5].map((star) => (
             <FaStar
@@ -106,7 +106,7 @@ const Quiz = () => {
           ))}
         </div>
         
-        <h2 className="text-xl font-bold mb-4">Você prefere colchões de uma marca específica?</h2>
+        <h2 className="text-xl font-bold mb-4">Você prefere fraldas de uma marca específica?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           {['Sim', 'Não', 'Depende'].map((preference) => (
             <button
@@ -119,9 +119,9 @@ const Quiz = () => {
           ))}
         </div>
         
-        <h2 className="text-xl font-bold mb-4">Qual colchão você acha mais confortável?</h2>
+        <h2 className="text-xl font-bold mb-4">Qual fralda você acha mais confortável para seu bebê?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-          {['Colchão A', 'Colchão B', 'Colchão C', 'Colchão D'].map((comfort) => (
+          {['Fralda A', 'Fralda B', 'Fralda C', 'Fralda D'].map((comfort) => (
             <button
               key={comfort}
               className={`p-2 border rounded-md ${selectedProducts.includes(comfort) ? 'bg-gray-300' : 'bg-white'}`}
@@ -132,7 +132,7 @@ const Quiz = () => {
           ))}
         </div>
         
-        <h2 className="text-xl font-bold mb-4">Você consideraria comprar um colchão online?</h2>
+        <h2 className="text-xl font-bold mb-4">Você consideraria comprar fraldas online?</h2>
         <div className="flex flex-col md:flex-row justify-between items-center mb-6 space-y-2 md:space-y-0 md:space-x-2">
           <button
             className={`w-full md:w-auto p-2 border rounded-md ${purchaseIntent === 'Sim' ? 'bg-gray-300' : 'bg-white'}`}
@@ -161,7 +161,7 @@ const Quiz = () => {
           ))}
         </div>
 
-        <h2 className="text-xl font-bold mb-4">Você recomendaria o uso de colchões Luuna para um amigo?</h2>
+        <h2 className="text-xl font-bold mb-4">Você recomendaria as fraldas Pampers para um amigo?</h2>
         <div className="flex justify-center items-center mb-6 space-x-2">
           {[1, 2, 3, 4, 5].map((star) => (
             <FaStar
@@ -173,7 +173,7 @@ const Quiz = () => {
           ))}
         </div>
 
-        <h2 className="text-xl font-bold mb-4">Você acredita que um bom colchão melhora sua qualidade de vida?</h2>
+        <h2 className="text-xl font-bold mb-4">Você acredita que fraldas de qualidade melhoram a vida do seu bebê?</h2>
         <div className="flex justify-center items-center mb-6 space-x-2">
           {[1, 2, 3, 4, 5].map((star) => (
             <FaStar
@@ -185,7 +185,7 @@ const Quiz = () => {
           ))}
         </div>
 
-        <h2 className="text-xl font-bold mb-4">Você já comprou um colchão online antes?</h2>
+        <h2 className="text-xl font-bold mb-4">Você já comprou fraldas online antes?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           {['Sim', 'Não'].map((answer) => (
             <button
@@ -198,7 +198,7 @@ const Quiz = () => {
           ))}
         </div>
 
-        <h2 className="text-xl font-bold mb-4">Quais características você considera ao comprar um colchão?</h2>
+        <h2 className="text-xl font-bold mb-4">Quais características você considera ao comprar fraldas?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           {['Conforto', 'Preço', 'Durabilidade', 'Marca'].map((feature) => (
             <button
@@ -211,7 +211,7 @@ const Quiz = () => {
           ))}
         </div>
 
-        <h2 className="text-xl font-bold mb-4">Você já teve uma experiência ruim com um colchão antes?</h2>
+        <h2 className="text-xl font-bold mb-4">Você já teve uma experiência ruim com fraldas antes?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           {['Sim', 'Não'].map((answer) => (
             <button
@@ -224,9 +224,9 @@ const Quiz = () => {
           ))}
         </div>
 
-        <h2 className="text-xl font-bold mb-4">Quanto você está disposto a gastar em um colchão de qualidade?</h2>
+        <h2 className="text-xl font-bold mb-4">Quanto você está disposto a gastar em fraldas de qualidade?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-          {['Menos de R$1000', 'R$1000 - R$3000', 'R$3000 - R$5000', 'Mais de R$5000'].map((priceRange) => (
+          {['Menos de R$100', 'R$100 - R$300', 'R$300 - R$500', 'Mais de R$500'].map((priceRange) => (
             <button
               key={priceRange}
               className={`p-2 border rounded-md ${selectedProducts.includes(priceRange) ? 'bg-gray-300' : 'bg-white'}`}

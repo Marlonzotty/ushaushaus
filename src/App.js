@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
-import StoreInfo from './components/StoreInfo';
 import ImageSlider from './components/ImageSlider';
 import Features from './components/Features';
 import SecurityFeatures from './components/SecurityFeatures';
@@ -11,6 +10,7 @@ import Congrats from './components/Congrats';
 import Footer from './components/Footer/Footer';
 import OfferPage from './components/OfferPage';
 import PaymentPage from './components/PaymentPage';
+import CommentSlider from  './components/CommentSlider'
 
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importando o CSS do Bootstrap
 
@@ -36,7 +36,6 @@ function App() {
       <Routes>
         <Route path="/" element={
           <MainLayout>
-            <StoreInfo />
             <ImageSlider />
             <Features />
             <SecurityFeatures />
@@ -60,6 +59,7 @@ function App() {
         <Route path="/payment" element={
           <NoHeaderLayout>
             <PaymentPage />
+            <CommentSlider />
           </NoHeaderLayout>
         } />
       </Routes>

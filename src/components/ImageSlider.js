@@ -1,30 +1,41 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Importar o useNavigate
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-const StoreInfo = () => (
-  <div className="bg-blue-200 text-center p-6">
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-      <div className="relative">
-        <picture>
-          <source
-            media="(max-width: 768px)"
-            srcSet="https://luunabrasil.vtexassets.com/assets/vtex.file-manager-graphql/images/07f89113-53c6-4318-b175-b5db654642d0___18b2f435256bee09ffaf88a6e68e5967.png"
-          />
-          <a href="https://www.google.com/maps/place/Luuna+Colch%C3%B5es/@-23.5763293,-46.6820688,17z/data=!3m1!4b1!4m15!1m8!3m7!1s0x94ce576590129011:0x92ad8767713133f1!2sAv.+Europa,+660+-+Jardim+Europa,+S%C3%A3o+Paulo+-+SP,+01449-000!3b1!8m2!3d-23.5763017!4d-46.6795218!16s%2Fg%2F11c29j5shv!3m5!1s0x94ce57a2c4e121d3:0xe533f866c63cea73!8m2!3d-23.5763293!4d-46.6794939!16s%2Fg%2F11vwv6bb2x?entry=ttu">
-            <img
-              src="https://luunabrasil.vtexassets.com/assets/vtex.file-manager-graphql/images/4fb1de8a-23d1-4fae-ab48-c3abfcb77526___566a8feca0a2faff01914a2e8e9cc1dc.png"
-              alt="Loja Luuna"
-              className="object-cover w-full h-96"
-            />
-          </a>
-        </picture>
-      </div>
-      <div className="p-4">
-        <p className="text-lg font-semibold">Av. Europa, 660 Jardim Europa, São Paulo</p>
-        <p className="text-lg font-semibold">SEG A SÁB 10h às 19h</p>
-        <p className="text-lg font-semibold">DOM 10h às 18h</p>
-      </div>
+const ImageSlider = () => {
+  const navigate = useNavigate(); // Usar o useNavigate para navegação
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
+
+  return (
+    <div className="container mx-auto mt-4 text-center">
+      <Slider {...settings}>
+        <div>
+          <img src="https://images.ctfassets.net/nhtsjibbyili/IALue6MxZLkDzBKJkJ79a/33af7a6b31e34a921babc4813d0eabad/Ehub_Pampers_Plan_MInha_Fralda_Perfeita_Banners_1360x720.png?fm=webp&q=70&w=800&h=510" alt="Slide 1" className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover" />
+        </div>
+        <div>
+          <img src="https://images.ctfassets.net/nhtsjibbyili/IALue6MxZLkDzBKJkJ79a/33af7a6b31e34a921babc4813d0eabad/Ehub_Pampers_Plan_MInha_Fralda_Perfeita_Banners_1360x720.png?fm=webp&q=70&w=800&h=510" alt="Slide 2" className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover" />
+        </div>
+        <div>
+          <img src="https://images.ctfassets.net/nhtsjibbyili/IALue6MxZLkDzBKJkJ79a/33af7a6b31e34a921babc4813d0eabad/Ehub_Pampers_Plan_MInha_Fralda_Perfeita_Banners_1360x720.png?fm=webp&q=70&w=800&h=510" alt="Slide 3" className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover" />
+        </div>
+      </Slider>
+      <button
+        onClick={() => navigate('/quiz')} // Navegar para a página do quiz
+        className="mt-6 bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-6 md:px-10 rounded-full shadow-lg transition transform hover:scale-105 animate-pulse"
+      >
+        Participe da Promoção Agora!
+      </button>
     </div>
-  </div>
-);
+  );
+};
 
-export default StoreInfo;
+export default ImageSlider;
